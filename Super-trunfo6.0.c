@@ -81,7 +81,7 @@ int main(){
     desisao_jogador = toupper(desisao_jogador); // Vai receber 's' ou 'n' e transformar em maiúsculo
     printf("\n");
 
-    switch (desisao_jogador){
+    switch (desisao_jogador){// menu para escolher os atributos
         case 'S':
             
             char comparar_novamete;
@@ -101,9 +101,9 @@ int main(){
             scanf("%d", &opcao_menu);
             printf("\n");
 
-            if (opcao_menu > 0 && opcao_menu < 6){
+            if (opcao_menu > 0 && opcao_menu < 6){// verificação de erro, caso o usuário não coloque uma opção válida
 
-                printf("Deseja comparar mais algum atributo? S/N\n");
+                printf("Deseja comparar mais algum atributo? S/N\n");// opção de escolher um segundo atributo para comparação
                 scanf(" %c", &comparar_novamete);
                 comparar_novamete = toupper(comparar_novamete);
 
@@ -123,19 +123,19 @@ int main(){
                     scanf("%d", &opcao_menu1);
                     printf("\n");
                     
-                    if (opcao_menu1 > 0 && opcao_menu1 < 6){
+                    if (opcao_menu1 > 0 && opcao_menu1 < 6){// verificação de erro, caso o usuário não coloque uma opção válida
 
-                        if (opcao_menu1 == opcao_menu){
+                        if (opcao_menu1 == opcao_menu){// caso o usário esolha um atributo repetido irá dar erro
 
                             printf("ERRO!!! Opção já escolhida...\n");
 
-                        }else{
+                        }else{// comparação dos dois atruibutos escolhido pelo usuário
 
                             int pontos_carta1 = 0, pontos_carta2 = 0; 
 
                             printf("Comparando atributos: %d - %d\n\n", opcao_menu, opcao_menu1);
-
-                            if((opcao_menu == 1 && opcao_menu1 == 2) || (opcao_menu == 2 && opcao_menu1 == 1)){
+                            // bloco de elife para comparação dos atributos
+                            if((opcao_menu == 1 && opcao_menu1 == 2) || (opcao_menu == 2 && opcao_menu1 == 1)){ // comparação entre os tributos: População e Área
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -177,7 +177,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 1 && opcao_menu1 == 3) || (opcao_menu == 3 && opcao_menu1 == 1)){
+                            }else if((opcao_menu == 1 && opcao_menu1 == 3) || (opcao_menu == 3 && opcao_menu1 == 1)){// comparação entre os tributos: População e PIB
                                 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -219,7 +219,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
                             
-                            }else if((opcao_menu == 1 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 1)){
+                            }else if((opcao_menu == 1 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 1)){// comparação entre os tributos: População e Número de pontos turisticos
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -261,7 +261,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 1 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 1)){
+                            }else if((opcao_menu == 1 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 1)){// comparação entre os tributos: População e Densidade demográfica
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -303,7 +303,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 2 && opcao_menu1 == 3) || (opcao_menu == 3 && opcao_menu1 == 2)){
+                            }else if((opcao_menu == 2 && opcao_menu1 == 3) || (opcao_menu == 3 && opcao_menu1 == 2)){// comparação entre os tributos: Área e PIB
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -345,7 +345,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 2 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 2)){
+                            }else if((opcao_menu == 2 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 2)){// comparação entre os tributos: Área e Número de pontos turisticos
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -387,7 +387,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 2 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 2)){
+                            }else if((opcao_menu == 2 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 2)){// comparação entre os tributos: Área e Densidade demográfica
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -429,7 +429,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 3 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 3)){
+                            }else if((opcao_menu == 3 && opcao_menu1 == 4) || (opcao_menu == 4 && opcao_menu1 == 3)){// comparação entre os tributos: PIB e Número de pontos turisticos
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -471,7 +471,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 3 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 3)){
+                            }else if((opcao_menu == 3 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 3)){// comparação entre os tributos: PIB e Densidade demográfica
 
                                     printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -513,7 +513,7 @@ int main(){
                                     }
                                     printf("************************************************************\n");
 
-                            }else if((opcao_menu == 4 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 4)){
+                            }else if((opcao_menu == 4 && opcao_menu1 == 5) || (opcao_menu == 5 && opcao_menu1 == 4)){// comparação entre os tributos: Número de pontos turisticos e Densidade demográfica
 
                                 printf("************************************************************\n\n");
                                     printf("###### %s VS %s ######\n", estado, estado1);
@@ -557,15 +557,17 @@ int main(){
                             }                               
                         }
 
+                    }else{
+                        printf("Opção Inválida!!!\n");
                     }
-                } else if (comparar_novamete == 'N'){
+                }else if (comparar_novamete == 'N'){ // caso o usuário não queira comparar mais que um atributo
 
                     printf("\nTudo bem... Comparando atributo (%d)\n\n", opcao_menu);
 
                     switch (opcao_menu){
 
                         case 1:
-                            printf("************************************************************\n");
+                            printf("************************************************************\n");// comparação com o tributo: População
                             printf("###### %s VS %s ######\n", estado, estado1);
                             printf("Atributo: População\n");
                             printf("Carta 1 - %s: %u\n", nome_cidade, populacao);
@@ -584,7 +586,7 @@ int main(){
                         break;
                         
                         case 2:
-                            printf("************************************************************\n");
+                            printf("************************************************************\n");// comparação com o tributo: Área
                             printf("###### %s VS %s ######\n", estado, estado1);
                             printf("Atributo: Área\n");
                             printf("Carta 1 - %s: %.2f Km²\n", nome_cidade, area);
@@ -603,7 +605,7 @@ int main(){
                         break;
 
                         case 3:
-                            printf("************************************************************\n");
+                            printf("************************************************************\n");// comparação com o tributo: PIB
                             printf("###### %s VS %s ######\n", estado, estado1);
                             printf("Atributo: PIB\n");
                             printf("Carta 1 - %s: %.2f bilhões de reais\n", nome_cidade, pib);
@@ -622,7 +624,7 @@ int main(){
                         break;
 
                         case 4:
-                            printf("************************************************************\n");
+                            printf("************************************************************\n");// comparação com o tributo: Pontos Turísticos
                             printf("###### %s VS %s ######\n", estado, estado1);
                             printf("Atributo: Pontos Turísticos\n");
                             printf("Carta 1 - %s: %d\n",nome_cidade, numeros_pontos_turisticos);
@@ -641,9 +643,9 @@ int main(){
                         break;
 
                         case 5:
-                            printf("************************************************************\n");
+                            printf("************************************************************\n");// comparação com o tributo: Densidade Populacional
                             printf("###### %s VS %s ######\n", estado, estado1);
-                            printf("Atributo: Desnsidade Populacional\n");
+                            printf("Atributo: Densidade Populacional\n");
                             printf("Carta 1 - %s: %.2f hab/Km²\n", nome_cidade, densidade_populacional);
                             printf("Carta 2 - %s: %.2f hab/Km²\n", nome_cidade1, densidade_populacional1);
                             printf("Resultado: ");
@@ -659,7 +661,7 @@ int main(){
                             printf("************************************************************\n");
                         break;
                         
-                        default:
+                        default: // No caso em que o usuário não escolha uma opção válida será exibida uma mensagem de erro
                             printf("!!!Opção inválida!!!\n");
                         break;
                         }
@@ -671,8 +673,7 @@ int main(){
 
         break;
 
-        case 'N':
-
+        case 'N': // Caso o usuário não queira comparar nenhum atributo o programa encerra
                 printf("Tudo bem! Encerrrando...");
         break;
 
